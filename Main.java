@@ -1,46 +1,47 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         //1
-        for (int i = 0; i < 50; i++) {
-            if (i%2==0){
-                System.out.println(i);
+        Integer[] list = {1,3,-3,0,-3,2,-5,4,0,-3,-2};
+        for (Integer b:list){
+            if (b<0){
+                System.out.println(b);
             }
-            System.out.println("-------------------------------------------");
-
-            //2
-            String[] a = {"sabir","sabir","aga","ad","random","random","aga"};
-            //3
-            Integer[] b = {1,2,3,4,5,5,6,7,8,9,11,22,44,55,77,233,453,3,45,3,4,48,2,4,5,2,7,4,5,4,45,45,4,2,234,67,4,543};
-                for (Integer c : b){
-                    if (c%2==0&&c%3==0){
-                        System.out.println(c);
-                    }
-                }
-            System.out.println("--------------------------------------------");
-                //4 ?
-//            Integer[] d = {1,2,3,4,5,5,6,7,8,9,11,22,44,55,77,233,453,3,45,3,4,48,2,4,5,2,7,4,5,4,45,45,4,2,234,67,4,543};
-//            for (Integer e:d){
-//                if (e>e){
-//                    System.out.println(e);
-//                }
-//            }
-            //5
-            Integer g = 10;
-            for (int j = 0; j < 11; j++) {
-                System.out.println(j*g);
-            }
-            System.out.println("-----------------------------");
-            //6
-            for (int j = 0; j < 11; j++) {
-                System.out.println(j*j);
-            }
-            System.out.println("-----------------------------------");
-            //7 ?
-            //8 ?
-
         }
+        System.out.println("---------------------------------");
+        //2
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("bir reqem yaz");
+        Integer number = scanner.nextInt();
+
+        int fact = 1;
+
+        for (int i = 1; i <= number; i++) {
+            fact *= i;
+        }
+
+        System.out.println("factorial:"+number+"="+fact);
+        //3
+        Integer[] array = {1,3,3,0,3,2,5,4,0,3,2};
+        for (Integer b:array){
+            if (b%2==1){
+                System.out.println(b+b);
+            }
+        }
+        System.out.println("---------------------------------------");
+        //4
+       Scanner sc = new Scanner(System.in);
+        System.out.println("bir reqem yaz");
+        Integer num = sc.nextInt();
+        if(num%2==0&&num%num==0){
+            System.out.println("sade deyil");
+        } else {
+            System.out.println("sadedir");
+        }
+        //5?
     }
 }
