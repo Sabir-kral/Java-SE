@@ -2,22 +2,23 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Integer[] i = {1,1,34,2,6,23,5,3};
-        Integer target = 5;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("reqem daxil edin: ");
+        int num = sc.nextInt();
 
-        HashMap<Integer, Integer> map = new HashMap<>();
+        int original = num;
+        int reversed = 0;
 
-        for (int j = 0; j < i.length; j++) {
-            int complement = target - i[j];
-
-            if (map.containsKey(complement)) {
-                System.out.println("Index: " + map.get(complement) + " and " + j);
-                return;
-            }
-
-            map.put(i[j], j);
+        while (num != 0) {
+            int digit = num % 10;
+            reversed = reversed * 10 + digit;
+            num /= 10;
         }
 
-        System.out.println("Not Found");
+        if (original == reversed) {
+            System.out.println(true);
+        } else {
+            System.out.println(false);
+        }
     }
     }
