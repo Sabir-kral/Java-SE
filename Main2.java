@@ -1,18 +1,11 @@
 public class Main2 {
     public static void main(String[] args) {
-        int[] arr = {4, 2, 3, 1, 5};
-
-        int cut = 0;
-        int tek = 0;
-        for (int a:arr){
-            if (a%2==0){
-                cut++;
-            }else {
-                tek++;
-            }
-
+        try {
+            String str = "sabir";
+            int a = Integer.parseInt(str);
+            System.out.println(a);
+        }catch (Error error){
+            System.out.println(error.getMessage());
         }
-        System.out.println("tek:"+tek);
-        System.out.println("cut:"+cut);
     }
 }

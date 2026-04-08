@@ -1,17 +1,11 @@
-import java.util.Arrays;
-
 public class Main3 {
     public static void main(String[] args) {
-        //3 basa dusmedim
-        int[] arr = {4, 2, 9, 1, 5};
-
-        int minIndex = arr[0];
-        for (int i = 1; i < arr.length; i++) {
-            if (minIndex>arr[i]) {
-                minIndex=arr[i];
-            }
+        int[] arr = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int index = 11;
+        try {
+            System.out.println(arr[index]);
+        } catch (Error error){
+            System.out.println(error.getMessage());
         }
-        System.out.println(minIndex);
     }
-    }
-
+}
